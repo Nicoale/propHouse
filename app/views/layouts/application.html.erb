@@ -11,6 +11,8 @@
   </head>
 
   <body>
+      <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   <% if ["public", "devise"].include?(controller.controller_name)%>
   <header>
   <%= render "layouts/nav/public" %>
@@ -18,8 +20,7 @@
   <%else%>
  <%= render "layouts/nav/dashboard" %>
   <%end%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
 
 
 

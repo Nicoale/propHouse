@@ -1,6 +1,6 @@
 # frozen_string_literal
 class ApplicationController < ActionController::Base
-  before_action :configured_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_account!, :configured_permitted_parameters, if: :devise_controller?
 
   protected
 
